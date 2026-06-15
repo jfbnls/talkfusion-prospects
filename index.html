@@ -749,7 +749,7 @@
       <p id="captureSubtitle"></p>
       <input class="capture-field" type="text" id="captureName" placeholder="Ton prénom">
       <input class="capture-field" type="email" id="captureEmail" placeholder="Ton adresse email">
-      <button class="capture-submit" id="captureSubmit">Recevoir les infos →</button>
+      <button class="capture-submit" id="captureSubmit" onclick="envoyerProspect()">Recevoir les infos →</button>
       <p class="capture-fine">Pas de spam. Une séquence de 7 vidéomails. Tu te désabonnes quand tu veux.</p>
     </div>
  
@@ -928,36 +928,31 @@
  
   const WEBHOOK = 'https://script.google.com/macros/s/AKfycbxu_sa1KDzEEi_T-v5gHN-E8jAuV2XFcFlAhXib8GI1aP040KE5CYlx158qSarqHL9wTA/exec';
  
-  document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('captureSubmit').addEventListener('click', async function() {
-      const prenom = document.getElementById('captureName').value.trim();
-      const email  = document.getElementById('captureEmail').value.trim();
+  async function envoyerProspect() {
+    const prenom = document.getElementById('captureName').value.trim();
+    const email  = document.getElementById('captureEmail').value.trim();
  
-      if (!email || !email.includes('@')) {
-        document.getElementById('captureEmail').style.borderColor = '#D4AF37';
-        document.getElementById('captureEmail').focus();
-        return;
-      }
+    if (!email || !email.includes('@')) {
+      document.getElementById('captureEmail').style.borderColor = '#D4AF37';
+      document.getElementById('captureEmail').focus();
+      return;
+    }
  
-      const btn = document.getElementById('captureSubmit');
-      btn.textContent = 'Envoi en cours…';
-      btn.style.opacity = '0.6';
-      btn.disabled = true;
+    const btn = document.getElementById('captureSubmit');
+    btn.textContent = 'Envoi en cours…';
+    btn.style.opacity = '0.6';
+    btn.disabled = true;
  
-      const params = new URLSearchParams({ prenom: prenom, email: email, source: 'Landing TalkFusion' });
-      await new Promise(function(resolve) {
-        const img = new Image();
-        img.onload = resolve;
-        img.onerror = resolve;
-        img.src = WEBHOOK + '?' + params.toString();
-        setTimeout(resolve, 5000);
-      });
+    const params = new URLSearchParams({ prenom: prenom, email: email, source: 'Landing TalkFusion' });
+    const img = new Image();
+    img.src = WEBHOOK + '?' + params.toString();
  
+    setTimeout(function() {
       document.getElementById('captureBox').style.display = 'none';
       document.getElementById('resultWrap').classList.remove('visible');
       document.getElementById('merciBox').classList.add('visible');
-    });
-  });
+    }, 2000);
+  }
 </script>
 </body>
 </html>
