@@ -6,9 +6,9 @@
 <title>JFBTeam · TalkFusion — Es-tu bâtisseur ou spectateur ?</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@400;500;600&display=swap');
-
+ 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   :root {
     --noir:    #0A0A0F;
     --encre:   #12121A;
@@ -22,9 +22,9 @@
     --violet-f:#4A3688;
     --accent:  #00D4FF;
   }
-
+ 
   html { scroll-behavior: smooth; }
-
+ 
   body {
     background: var(--noir);
     color: var(--blanc);
@@ -33,7 +33,7 @@
     line-height: 1.65;
     min-height: 100vh;
   }
-
+ 
   /* ─── HERO ─── */
   .hero {
     min-height: 100vh;
@@ -46,7 +46,7 @@
     position: relative;
     overflow: hidden;
   }
-
+ 
   .hero::before {
     content: '';
     position: absolute;
@@ -56,7 +56,7 @@
       radial-gradient(ellipse 40% 30% at 80% 60%, rgba(0,212,255,0.08) 0%, transparent 60%);
     pointer-events: none;
   }
-
+ 
   .badge {
     display: inline-block;
     border: 1px solid var(--or);
@@ -70,7 +70,7 @@
     border-radius: 2px;
     margin-bottom: 32px;
   }
-
+ 
   .hero h1 {
     font-family: 'Syne', sans-serif;
     font-size: clamp(2rem, 6vw, 4rem);
@@ -80,30 +80,30 @@
     margin-bottom: 24px;
     letter-spacing: -0.02em;
   }
-
+ 
   .hero h1 em {
     font-style: normal;
     color: var(--or-clair);
   }
-
+ 
   .hero-sub {
     font-size: clamp(1rem, 2vw, 1.2rem);
     color: var(--gris);
     max-width: 540px;
     margin-bottom: 16px;
   }
-
+ 
   .hero-author {
     font-size: 13px;
     color: var(--gris);
     margin-bottom: 48px;
   }
-
+ 
   .hero-author span {
     color: var(--or);
     font-weight: 600;
   }
-
+ 
   .stat-strip {
     display: flex;
     gap: 48px;
@@ -111,11 +111,11 @@
     flex-wrap: wrap;
     margin-bottom: 56px;
   }
-
+ 
   .stat-item {
     text-align: center;
   }
-
+ 
   .stat-num {
     font-family: 'Syne', sans-serif;
     font-size: 2rem;
@@ -124,14 +124,14 @@
     display: block;
     line-height: 1;
   }
-
+ 
   .stat-label {
     font-size: 12px;
     color: var(--gris);
     letter-spacing: 0.05em;
     margin-top: 4px;
   }
-
+ 
   .cta-btn {
     display: inline-block;
     background: linear-gradient(135deg, var(--or) 0%, var(--or-clair) 100%);
@@ -147,22 +147,22 @@
     text-decoration: none;
     transition: opacity 0.2s, transform 0.2s;
   }
-
+ 
   .cta-btn:hover { opacity: 0.9; transform: translateY(-1px); }
-
+ 
   .cta-note {
     font-size: 12px;
     color: var(--gris);
     margin-top: 14px;
   }
-
+ 
   /* ─── SECTION COMMUNE ─── */
   section {
     padding: 80px 24px;
     max-width: 860px;
     margin: 0 auto;
   }
-
+ 
   .section-label {
     font-family: 'Syne', sans-serif;
     font-size: 11px;
@@ -172,7 +172,7 @@
     color: var(--or);
     margin-bottom: 16px;
   }
-
+ 
   h2 {
     font-family: 'Syne', sans-serif;
     font-size: clamp(1.6rem, 4vw, 2.4rem);
@@ -181,18 +181,18 @@
     margin-bottom: 20px;
     letter-spacing: -0.02em;
   }
-
+ 
   h2 em { font-style: normal; color: var(--or-clair); }
-
+ 
   p { color: var(--gris); margin-bottom: 16px; }
   p strong { color: var(--blanc); }
-
+ 
   hr.divider {
     border: none;
     border-top: 1px solid var(--bord);
     margin: 0;
   }
-
+ 
   /* ─── PROOF STRIP ─── */
   .proof-strip {
     background: var(--panel);
@@ -200,7 +200,7 @@
     border-bottom: 1px solid var(--bord);
     padding: 40px 24px;
   }
-
+ 
   .proof-inner {
     max-width: 860px;
     margin: 0 auto;
@@ -209,7 +209,7 @@
     gap: 32px;
     text-align: center;
   }
-
+ 
   .proof-item .p-num {
     font-family: 'Syne', sans-serif;
     font-size: 2.2rem;
@@ -217,13 +217,13 @@
     color: var(--accent);
     display: block;
   }
-
+ 
   .proof-item .p-label {
     font-size: 13px;
     color: var(--gris);
     margin-top: 4px;
   }
-
+ 
   /* ─── QUIZ ─── */
   .quiz-wrap {
     background: var(--encre);
@@ -232,26 +232,26 @@
     max-width: 680px;
     margin: 0 auto;
   }
-
+ 
   .quiz-progress {
     display: flex;
     gap: 6px;
     margin-bottom: 40px;
   }
-
+ 
   .progress-dot {
     height: 3px;
     flex: 1;
     background: var(--bord);
     transition: background 0.3s;
   }
-
+ 
   .progress-dot.active { background: var(--or); }
   .progress-dot.done   { background: var(--or-clair); }
-
+ 
   .quiz-step { display: none; }
   .quiz-step.visible { display: block; }
-
+ 
   .q-number {
     font-family: 'Syne', sans-serif;
     font-size: 11px;
@@ -261,7 +261,7 @@
     color: var(--or);
     margin-bottom: 12px;
   }
-
+ 
   .q-text {
     font-family: 'Syne', sans-serif;
     font-size: clamp(1.1rem, 3vw, 1.4rem);
@@ -270,13 +270,13 @@
     margin-bottom: 32px;
     line-height: 1.3;
   }
-
+ 
   .options {
     display: flex;
     flex-direction: column;
     gap: 12px;
   }
-
+ 
   .option-btn {
     background: transparent;
     border: 1px solid var(--bord);
@@ -289,25 +289,25 @@
     transition: border-color 0.2s, background 0.2s, color 0.2s;
     line-height: 1.4;
   }
-
+ 
   .option-btn:hover {
     border-color: var(--or);
     background: rgba(212,175,55,0.06);
     color: var(--or-clair);
   }
-
+ 
   .option-btn.selected {
     border-color: var(--or-clair);
     background: rgba(212,175,55,0.12);
     color: var(--or-clair);
   }
-
+ 
   .quiz-nav {
     display: flex;
     justify-content: flex-end;
     margin-top: 32px;
   }
-
+ 
   .next-btn {
     background: var(--or);
     color: var(--noir);
@@ -323,25 +323,25 @@
     pointer-events: none;
     transition: opacity 0.2s;
   }
-
+ 
   .next-btn.enabled {
     opacity: 1;
     pointer-events: all;
   }
-
+ 
   /* ─── RÉSULTATS ─── */
   .result-wrap {
     display: none;
     text-align: center;
   }
-
+ 
   .result-wrap.visible { display: block; }
-
+ 
   .result-icon {
     font-size: 3rem;
     margin-bottom: 20px;
   }
-
+ 
   .result-title {
     font-family: 'Syne', sans-serif;
     font-size: clamp(1.4rem, 4vw, 2rem);
@@ -350,7 +350,7 @@
     margin-bottom: 16px;
     line-height: 1.2;
   }
-
+ 
   .result-text {
     color: var(--gris);
     font-size: 15px;
@@ -358,9 +358,9 @@
     margin: 0 auto 32px;
     line-height: 1.7;
   }
-
+ 
   .result-text strong { color: var(--blanc); }
-
+ 
   /* ─── CAPTURE EMAIL ─── */
   .capture-box {
     background: var(--panel);
@@ -370,7 +370,7 @@
     margin: 32px auto 0;
     text-align: left;
   }
-
+ 
   .capture-box h3 {
     font-family: 'Syne', sans-serif;
     font-weight: 700;
@@ -378,13 +378,13 @@
     color: var(--blanc);
     margin-bottom: 8px;
   }
-
+ 
   .capture-box p {
     font-size: 13px;
     color: var(--gris);
     margin-bottom: 24px;
   }
-
+ 
   .capture-field {
     width: 100%;
     background: var(--encre);
@@ -397,10 +397,10 @@
     outline: none;
     transition: border-color 0.2s;
   }
-
+ 
   .capture-field:focus { border-color: var(--or); }
   .capture-field::placeholder { color: var(--gris); }
-
+ 
   .capture-submit {
     width: 100%;
     background: linear-gradient(135deg, var(--or) 0%, var(--or-clair) 100%);
@@ -415,25 +415,25 @@
     cursor: pointer;
     transition: opacity 0.2s;
   }
-
+ 
   .capture-submit:hover { opacity: 0.9; }
-
+ 
   .capture-fine {
     font-size: 11px;
     color: var(--gris);
     margin-top: 12px;
     text-align: center;
   }
-
+ 
   /* ─── MERCI ─── */
   .merci-box {
     display: none;
     text-align: center;
     padding: 40px;
   }
-
+ 
   .merci-box.visible { display: block; }
-
+ 
   .merci-box h3 {
     font-family: 'Syne', sans-serif;
     font-size: 1.5rem;
@@ -441,9 +441,9 @@
     color: var(--or-clair);
     margin-bottom: 16px;
   }
-
+ 
   .merci-box p { font-size: 15px; }
-
+ 
   /* ─── MÉCANISME ─── */
   .meca-grid {
     display: grid;
@@ -451,16 +451,16 @@
     gap: 2px;
     margin-top: 40px;
   }
-
+ 
   .meca-card {
     background: var(--panel);
     padding: 32px 28px;
     border-top: 2px solid transparent;
     transition: border-color 0.2s;
   }
-
+ 
   .meca-card:hover { border-color: var(--or); }
-
+ 
   .meca-tag {
     font-family: 'Syne', sans-serif;
     font-size: 10px;
@@ -470,7 +470,7 @@
     color: var(--or);
     margin-bottom: 12px;
   }
-
+ 
   .meca-card h3 {
     font-family: 'Syne', sans-serif;
     font-size: 1.1rem;
@@ -478,9 +478,9 @@
     color: var(--blanc);
     margin-bottom: 10px;
   }
-
+ 
   .meca-card p { font-size: 14px; margin: 0; }
-
+ 
   /* ─── TIMELINE PAYOFF ─── */
   .timeline {
     margin-top: 40px;
@@ -488,12 +488,12 @@
     padding-left: 28px;
     border-left: 1px solid var(--bord);
   }
-
+ 
   .tl-item {
     margin-bottom: 36px;
     position: relative;
   }
-
+ 
   .tl-item::before {
     content: '';
     position: absolute;
@@ -504,7 +504,7 @@
     border-radius: 50%;
     background: var(--or);
   }
-
+ 
   .tl-tag {
     font-family: 'Syne', sans-serif;
     font-size: 10px;
@@ -514,7 +514,7 @@
     color: var(--or);
     margin-bottom: 6px;
   }
-
+ 
   .tl-title {
     font-family: 'Syne', sans-serif;
     font-size: 1rem;
@@ -522,21 +522,21 @@
     color: var(--blanc);
     margin-bottom: 6px;
   }
-
+ 
   .tl-desc { font-size: 14px; }
-
+ 
   /* ─── FOOTER ─── */
   footer {
     border-top: 1px solid var(--bord);
     padding: 40px 24px;
     text-align: center;
   }
-
+ 
   .footer-inner {
     max-width: 860px;
     margin: 0 auto;
   }
-
+ 
   .footer-brand {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
@@ -544,22 +544,22 @@
     color: var(--or);
     margin-bottom: 8px;
   }
-
+ 
   .footer-link {
     color: var(--gris);
     font-size: 13px;
     text-decoration: none;
   }
-
+ 
   .footer-link:hover { color: var(--or); }
-
+ 
   .footer-disclaimer {
     font-size: 11px;
     color: var(--bord);
     margin-top: 20px;
     line-height: 1.6;
   }
-
+ 
   /* ─── RESPONSIVE ─── */
   @media (max-width: 600px) {
     .quiz-wrap { padding: 36px 24px; }
@@ -569,17 +569,17 @@
 </style>
 </head>
 <body>
-
+ 
 <!-- ═══════════════════ HERO ═══════════════════ -->
 <div class="hero">
   <div class="badge">JFBTeam · TalkFusion</div>
-
+ 
   <h1>La prospection a changé.<br><em>La question c'est : toi, tu as changé ?</em></h1>
-
+ 
   <p class="hero-sub">35 ans de réseau marketing. J'ai vu des promesses. J'ai vu des projets s'effondrer. Là je te montre ce que j'utilise moi-même.</p>
-
+ 
   <p class="hero-author">Jean-François B. — <span>Papyboomer actif</span></p>
-
+ 
   <div class="stat-strip">
     <div class="stat-item">
       <span class="stat-num">1 min</span>
@@ -598,13 +598,13 @@
       <div class="stat-label">Je connais ce projet</div>
     </div>
   </div>
-
+ 
   <a href="#quiz" class="cta-btn">Faire le test — 2 minutes</a>
   <p class="cta-note">Pas d'inscription. Pas de relance automatique si tu ne veux pas.</p>
 </div>
-
+ 
 <hr class="divider">
-
+ 
 <!-- ═══════════════════ PROOF STRIP ═══════════════════ -->
 <div class="proof-strip">
   <div class="proof-inner">
@@ -626,28 +626,28 @@
     </div>
   </div>
 </div>
-
+ 
 <!-- ═══════════════════ POURQUOI ═══════════════════ -->
 <section>
   <div class="section-label">Avant le quiz</div>
   <h2>Je ne cherche pas tout le monde.<br><em>Je cherche 2 personnes.</em></h2>
-
+ 
   <p>J'ai passé 35 ans dans le réseau marketing. J'ai vu des projets partir comme des fusées et s'effondrer en 6 mois. J'ai entraîné des gens dans des aventures qui ont mal tourné. Ces gens sont venus me demander des comptes.</p>
-
+ 
   <p>TalkFusion je le connais depuis 2017. J'ai arrêté parce que le timing était mauvais. J'ai repris en 2025 pour une raison simple : <strong>le streaming a tout changé.</strong> Netflix. YouTube. TikTok. Les réunions Zoom. 8 ans de vidéo dans les habitudes de tout le monde.</p>
-
+ 
   <p>Aujourd'hui je construis une communauté compensée autour de cet outil. Pas une armée. Une équipe. <strong>Mon modèle : le Power of 4 pour démarrer, le Power of 2 pour durer.</strong></p>
-
+ 
   <p>Ce quiz va me dire — et te dire — si on est faits pour travailler ensemble.</p>
 </section>
-
+ 
 <hr class="divider">
-
+ 
 <!-- ═══════════════════ QUIZ ═══════════════════ -->
 <section id="quiz" style="padding-top: 80px;">
   <div class="section-label">Le test — 6 questions</div>
   <h2 style="margin-bottom: 40px;">Es-tu<br><em>bâtisseur ou spectateur ?</em></h2>
-
+ 
   <div class="quiz-wrap">
     <div class="quiz-progress" id="quizProgress">
       <div class="progress-dot active" id="dot0"></div>
@@ -657,7 +657,7 @@
       <div class="progress-dot" id="dot4"></div>
       <div class="progress-dot" id="dot5"></div>
     </div>
-
+ 
     <!-- Q1 -->
     <div class="quiz-step visible" id="step0">
       <div class="q-number">Question 1 / 6</div>
@@ -670,7 +670,7 @@
       </div>
       <div class="quiz-nav"><button class="next-btn" id="next0">Suivant →</button></div>
     </div>
-
+ 
     <!-- Q2 -->
     <div class="quiz-step" id="step1">
       <div class="q-number">Question 2 / 6</div>
@@ -683,7 +683,7 @@
       </div>
       <div class="quiz-nav"><button class="next-btn" id="next1">Suivant →</button></div>
     </div>
-
+ 
     <!-- Q3 -->
     <div class="quiz-step" id="step2">
       <div class="q-number">Question 3 / 6</div>
@@ -696,7 +696,7 @@
       </div>
       <div class="quiz-nav"><button class="next-btn" id="next2">Suivant →</button></div>
     </div>
-
+ 
     <!-- Q4 -->
     <div class="quiz-step" id="step3">
       <div class="q-number">Question 4 / 6</div>
@@ -709,7 +709,7 @@
       </div>
       <div class="quiz-nav"><button class="next-btn" id="next3">Suivant →</button></div>
     </div>
-
+ 
     <!-- Q5 -->
     <div class="quiz-step" id="step4">
       <div class="q-number">Question 5 / 6</div>
@@ -722,7 +722,7 @@
       </div>
       <div class="quiz-nav"><button class="next-btn" id="next4">Suivant →</button></div>
     </div>
-
+ 
     <!-- Q6 -->
     <div class="quiz-step" id="step5">
       <div class="q-number">Question 6 / 6</div>
@@ -735,14 +735,14 @@
       </div>
       <div class="quiz-nav"><button class="next-btn" id="next5">Voir mon résultat →</button></div>
     </div>
-
+ 
     <!-- RÉSULTATS -->
     <div class="result-wrap" id="resultWrap">
       <div class="result-icon" id="resultIcon"></div>
       <div class="result-title" id="resultTitle"></div>
       <p class="result-text" id="resultText"></p>
     </div>
-
+ 
     <!-- CAPTURE EMAIL -->
     <div class="capture-box" id="captureBox" style="display:none;">
       <h3 id="captureTitle"></h3>
@@ -752,7 +752,7 @@
       <button class="capture-submit" id="captureSubmit">Recevoir les infos →</button>
       <p class="capture-fine">Pas de spam. Une séquence de 7 vidéomails. Tu te désabonnes quand tu veux.</p>
     </div>
-
+ 
     <!-- MERCI -->
     <div class="merci-box" id="merciBox">
       <h3>C'est noté.</h3>
@@ -760,16 +760,16 @@
       <br>
       <a href="https://beacons.ai/jfbteam" class="cta-btn" style="margin-top: 16px;">Explorer beacons.ai/jfbteam →</a>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <!-- ═══════════════════ MÉCANISME ═══════════════════ -->
 <section>
   <div class="section-label">Comment ça fonctionne</div>
   <h2>Le modèle en clair.<br><em>Sans fioriture.</em></h2>
   <p>Deux étapes. Deux logiques différentes. Dans le bon ordre.</p>
-
+ 
   <div class="meca-grid">
     <div class="meca-card">
       <div class="meca-tag">Étape 1 — Mois 1</div>
@@ -788,14 +788,14 @@
     </div>
   </div>
 </section>
-
+ 
 <hr class="divider">
-
+ 
 <!-- ═══════════════════ TIMELINE ═══════════════════ -->
 <section>
   <div class="section-label">Le chemin concret</div>
   <h2>De zéro à<br><em>bâtisseur opérationnel.</em></h2>
-
+ 
   <div class="timeline">
     <div class="tl-item">
       <div class="tl-tag">Jour 1</div>
@@ -819,9 +819,9 @@
     </div>
   </div>
 </section>
-
+ 
 <hr class="divider">
-
+ 
 <!-- ═══════════════════ CTA FINAL ═══════════════════ -->
 <section style="text-align:center;">
   <div class="section-label">La prochaine étape</div>
@@ -830,7 +830,7 @@
   <a href="#quiz" class="cta-btn">Faire le test →</a>
   <p class="cta-note" style="margin-top:14px;">Ou directement : <a href="https://beacons.ai/jfbteam" style="color:var(--or);">beacons.ai/jfbteam</a></p>
 </section>
-
+ 
 <!-- ═══════════════════ FOOTER ═══════════════════ -->
 <footer>
   <div class="footer-inner">
@@ -843,23 +843,23 @@
     </p>
   </div>
 </footer>
-
+ 
 <script>
   const questions = 6;
   let scores = new Array(questions).fill(null);
   let current = 0;
-
+ 
   function getStep(i) { return document.getElementById('step' + i); }
   function getDot(i)  { return document.getElementById('dot' + i); }
   function getNext(i) { return document.getElementById('next' + i); }
-
+ 
   // Gestion des options
   for (let i = 0; i < questions; i++) {
     const step = getStep(i);
     if (!step) continue;
     const opts = step.querySelectorAll('.option-btn');
     const nxt  = getNext(i);
-
+ 
     opts.forEach(btn => {
       btn.addEventListener('click', () => {
         opts.forEach(b => b.classList.remove('selected'));
@@ -868,7 +868,7 @@
         if (nxt) { nxt.classList.add('enabled'); }
       });
     });
-
+ 
     if (nxt) {
       nxt.addEventListener('click', () => {
         if (scores[i] === null) return;
@@ -885,7 +885,7 @@
       });
     }
   }
-
+ 
   function showResult() {
     const total = scores.reduce((a, b) => a + (b || 0), 0);
     const rWrap  = document.getElementById('resultWrap');
@@ -895,14 +895,14 @@
     const cBox   = document.getElementById('captureBox');
     const cTitle = document.getElementById('captureTitle');
     const cSub   = document.getElementById('captureSubtitle');
-
+ 
     // Masquer dernière question
     getStep(questions - 1).classList.remove('visible');
     // Masquer progress
     document.getElementById('quizProgress').style.display = 'none';
-
+ 
     rWrap.classList.add('visible');
-
+ 
     if (total >= 14) {
       rIcon.textContent  = '🔥';
       rTitle.textContent = 'Profil Bâtisseur Confirmé';
@@ -922,41 +922,42 @@
       cTitle.textContent = 'Vois d\'abord. Décide ensuite.';
       cSub.textContent   = 'Juste un vidéomail. Aucun engagement.';
     }
-
+ 
     cBox.style.display = 'block';
-    setupCapture();
   }
-
+ 
   const WEBHOOK = 'https://script.google.com/macros/s/AKfycbxu_sa1KDzEEi_T-v5gHN-E8jAuV2XFcFlAhXib8GI1aP040KE5CYlx158qSarqHL9wTA/exec';
-
-  function setupCapture() {
-    document.getElementById('captureSubmit').addEventListener('click', async () => {
+ 
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('captureSubmit').addEventListener('click', async function() {
       const prenom = document.getElementById('captureName').value.trim();
       const email  = document.getElementById('captureEmail').value.trim();
+ 
       if (!email || !email.includes('@')) {
-        document.getElementById('captureEmail').style.borderColor = 'var(--or)';
+        document.getElementById('captureEmail').style.borderColor = '#D4AF37';
         document.getElementById('captureEmail').focus();
         return;
       }
-
+ 
       const btn = document.getElementById('captureSubmit');
       btn.textContent = 'Envoi en cours…';
       btn.style.opacity = '0.6';
-
-      // Envoi via balise image (contournement CORS GitHub Pages → Apps Script)
-      const params = new URLSearchParams({ prenom, email, source: 'Landing TalkFusion' });
-      await new Promise((resolve) => {
+      btn.disabled = true;
+ 
+      const params = new URLSearchParams({ prenom: prenom, email: email, source: 'Landing TalkFusion' });
+      await new Promise(function(resolve) {
         const img = new Image();
-        img.onload = img.onerror = resolve;
+        img.onload = resolve;
+        img.onerror = resolve;
         img.src = WEBHOOK + '?' + params.toString();
         setTimeout(resolve, 5000);
       });
-
+ 
       document.getElementById('captureBox').style.display = 'none';
       document.getElementById('resultWrap').classList.remove('visible');
       document.getElementById('merciBox').classList.add('visible');
     });
-  }
+  });
 </script>
 </body>
 </html>
